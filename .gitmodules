@@ -1,0 +1,2 @@
+[submodule "rooms-chat"]
+	url = https://github.com/DigitalNaut/chat-react.git
