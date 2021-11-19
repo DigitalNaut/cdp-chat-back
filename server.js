@@ -43,7 +43,14 @@ io.on('connection',(socket)=>{
     });
     /* crear un array nuevo con el nombre de la nueva sala*/
     socket.on("add room",(roomName)=>{
-        
+        let newArray = [];
+        messages={
+            ...messages,
+            newArray
+        }
+        messages[roomName]=messages['newArray'];
+        delete messages['newArray'];
+        return messages;
     });
 
     /*Unirse a una sala*/
